@@ -34,6 +34,7 @@ p {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .list {
@@ -137,12 +138,26 @@ p {
 /* Menu Contacts */
 
 .contact-item {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
 }
 
 .contact-item:hover,
 .contact-item:focus {
   color: var(--brand-accent-color);
+}
+
+.icon-contact {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-contact.smartphone {
+  width: 10px;
+  height: 16px;
 }
 
 /* ---- hero ---- */
@@ -204,10 +219,6 @@ p {
   background-color: var(--accent-color-hover);
 }
 
-/* .hero .button {
-  margin-bottom: 200px;
-} */
-
 /* Наши особенности */
 .visually-hidden {
   position: absolute;
@@ -224,6 +235,21 @@ p {
 
 .particularities.section {
   padding-bottom: 0px;
+}
+
+.icon-button {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--second-background);
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-particularities {
+  width: 70px;
+  height: 70px;
 }
 
 .item-title {
@@ -313,7 +339,49 @@ p {
   margin-left: 30px;
 }
 
-/* Футер */
+/* clients */
+
+.clients-box {
+  display: flex;
+  justify-content: left;
+}
+
+.client-button {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  margin-right: 30px;
+
+  color: #afb1b8;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.client-button:last-of-type {
+  margin-right: 0px;
+}
+
+.link-client {
+  display: flex;
+}
+
+.icon-client {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.client-button:hover,
+.client-button:focus {
+  border: 1px solid var(--brand-accent-color);
+  color: var(--brand-accent-color);
+}
+
+/* footer */
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -362,6 +430,58 @@ p {
 .contact-item:not(:last-child) {
   display: block;
   margin-bottom: 9px;
+}
+
+/* блок "присоединяйтесь" */
+.invite {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.media {
+  display: flex;
+  width: 206px;
+  height: 80px;
+}
+
+.button-media {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--contrast-text-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.button-media:hover,
+.button-media:focus {
+  background-color: var(--brand-accent-color);
+}
+
+.icon-media {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
+.link-media {
+  display: flex;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.invite-block {
+  margin-left: 70px;
 }
 
 /* Styles for portfolio.html */
