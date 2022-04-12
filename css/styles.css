@@ -164,7 +164,7 @@ p {
 /* ---- hero ---- */
 .hero {
   width: 1600px;
-  height: 600px;
+  /* height: 600px; */
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -196,21 +196,22 @@ p {
 
 .button {
   display: inline-block;
-  padding: 10px 32px;
   border-radius: 4px;
   border: transparent;
 
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 16px;
-  line-height: 1.88;
-  font-weight: 700;
   letter-spacing: 0.06em;
 
   cursor: pointer;
 }
 
 .button.primary {
+  padding: 10px 32px;
+  font-weight: 700;
+  line-height: 1.88;
+
   background-color: var(--brand-accent-color);
   color: var(--contrast-text-color);
 }
@@ -247,11 +248,6 @@ p {
   align-items: center;
   justify-content: center;
 }
-/* 
-.icon-particularities {
-  width: 70px;
-  height: 70px;
-} */
 
 .item-title {
   font-weight: 700;
@@ -341,31 +337,28 @@ p {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team .team-card + .team-card {
   margin-left: 30px;
 }
 
-.team-media.button-media {
+.team-text .link-media {
   background-color: var(--contrast-text-color);
   color: var(--icons-gray);
 }
 
-.team-media.button-media:focus,
-.team-media.button-media:hover {
+.team-text .link-media:focus,
+.team-text .link-media:hover {
   background-color: var(--brand-accent-color);
   color: var(--contrast-text-color);
 }
 
-.button-media:hover,
-.button-media:focus {
+.link-media:hover,
+.link-media:focus {
   background-color: var(--brand-accent-color);
-}
-
-.team .media {
-  margin-bottom: 30px;
-  margin-left: 32px;
+  color: var(--contrast-text-color);
 }
 
 /* clients */
@@ -376,6 +369,14 @@ p {
 }
 
 .client-button {
+  display: flex;
+}
+
+.client-button:last-of-type {
+  margin-right: 0px;
+}
+
+.link-client {
   display: flex;
   width: 170px;
   height: 92px;
@@ -389,22 +390,12 @@ p {
   justify-content: center;
 }
 
-.client-button:last-of-type {
-  margin-right: 0px;
-}
-
-.link-client {
-  display: flex;
-}
-
 .icon-client {
-  /* width: 106px;
-  height: 60px; */
   fill: currentColor;
 }
 
-.client-button:hover,
-.client-button:focus {
+.link-client:hover,
+.link-client:focus {
   border: 1px solid var(--brand-accent-color);
   color: var(--brand-accent-color);
 }
@@ -462,46 +453,6 @@ p {
 }
 
 /* блок "присоединяйтесь" */
-.invite {
-  text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-}
-
-.media {
-  display: flex;
-  width: 206px;
-  height: 44px;
-}
-
-.button-media {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--contrast-text-color);
-  align-items: center;
-  justify-content: center;
-}
-
-.button-media:last-of-type {
-  margin-right: 0px;
-}
-/* 
-.icon-media {
-  width: 20px;
-  height: 20px;
-
-  fill: currentColor;
-} */
-
-.link-media {
-  display: flex;
-}
-
 .footer-flex {
   display: flex;
   align-items: baseline;
@@ -515,21 +466,48 @@ p {
   margin-top: 30px;
 }
 
-/* Styles for portfolio.html */
-
-.button.secondary {
-  background-color: var(--second-background);
-  color: var(--title-text-color);
-  line-height: 1.63;
+.invite {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 
-.button.secondary:hover,
-.button.secondary:focus {
-  background-color: var(--brand-accent-color);
+.media {
+  display: flex;
+  justify-content: center;
+}
+
+.button-media {
+  display: flex;
+  margin-right: 10px;
+}
+
+.button-media:last-of-type {
+  margin-right: 0px;
+}
+
+.icon-media {
+  fill: currentColor;
+}
+
+.link-media {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
   color: var(--contrast-text-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  align-items: center;
+  justify-content: center;
 }
+
+.link-media:hover,
+.link-media:focus {
+  background-color: var(--brand-accent-color);
+}
+
+/* Styles for portfolio.html */
 
 .filter {
   display: flex;
@@ -539,6 +517,22 @@ p {
 
 .filter .item + .item {
   margin-left: 8px;
+}
+
+.button.secondary {
+  background-color: var(--second-background);
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.63;
+  padding: 6px 22px;
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--brand-accent-color);
+  color: var(--contrast-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ---- cards of examples ---- */
