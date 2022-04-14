@@ -370,6 +370,7 @@ p {
 
 .client-button {
   display: flex;
+  margin-right: 30px;
 }
 
 .client-button:last-of-type {
@@ -382,7 +383,6 @@ p {
   height: 92px;
   border: 1px solid var(--icons-gray);
   border-radius: 4px;
-  margin-right: 30px;
 
   color: var(--icons-gray);
 
